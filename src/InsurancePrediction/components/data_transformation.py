@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 from dataclasses import dataclass
-from src.InsurancePrediction.exception import customexception
+from src.InsurancePrediction.exception import CustomException
 from src.InsurancePrediction.logger import logging
 
 from sklearn.compose import ColumnTransformer

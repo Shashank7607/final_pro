@@ -11,7 +11,7 @@ class TrainingPipeline:
             train_data_path, test_data_path = data_ingestion.initiate_data_ingestion()
             return train_data_path, test_data_path
         except Exception as e:
-            raise CustomException(str(e))
+            raise CustomException(str(e), sys.exc_info())
 
     def start_data_transformation(self, train_data_path, test_data_path):
         try:
@@ -19,14 +19,14 @@ class TrainingPipeline:
             train_arr, test_arr = data_transformation.initialize_data_transformation(train_data_path, test_data_path)
             return train_arr, test_arr
         except Exception as e:
-            raise CustomException(str(e))
+            raise CustomException(str(e), sys.exc_info())
 
     def start_model_training(self, train_arr, test_arr):
         try:
             model_trainer = ModelTrainer()
-            model_trainer.initiate_model_training(train_arr, test_arr)
+            model_trainer.train(train_arr, test_arr)  # Assuming 'train' is the correct method name
         except Exception as e:
-            raise CustomException(str(e))
+            raise CustomException(str(e), sys.exc_info())
 
     def start_training(self):
         try:

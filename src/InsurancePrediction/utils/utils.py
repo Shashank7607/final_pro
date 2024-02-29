@@ -3,8 +3,8 @@ import sys
 import pickle
 import numpy as np
 import pandas as pd
-from src.DiamondPricePrediction.logger import logging
-from src.DiamondPricePrediction.exception import CustomException  # Correct import
+from src.InsurancePrediction.logger import logging
+from src.InsurancePrediction.exception import CustomException  # Correct import
 
 from sklearn.metrics import r2_score
 

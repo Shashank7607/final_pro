@@ -17,7 +17,6 @@ if __name__ == "__main__":
     try:
         a = 1 / 0
 
-    except Exception as e:
-        pass
-
-    raise CustomException(e, sys.exc_info())
+    except Exception:
+        error_details = sys.exc_info()  # Get the exception details
+        raise CustomException("division by zero", error_details)
