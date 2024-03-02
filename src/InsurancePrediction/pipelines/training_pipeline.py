@@ -24,7 +24,7 @@ class TrainingPipeline:
     def start_model_training(self, train_arr, test_arr):
         try:
             model_trainer = ModelTrainer()
-            model_trainer.train(train_arr, test_arr)  # Assuming 'train' is the correct method name
+            model_trainer.initiate_model_training(train_arr, test_arr)  # Corrected method name
         except Exception as e:
             raise CustomException(str(e), sys.exc_info())
 
