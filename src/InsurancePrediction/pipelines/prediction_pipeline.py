@@ -35,14 +35,14 @@ class CustomData:
     def __init__(self,
                  age:float,
                  bmi:float,
-                 childrren:float,
+                 children:float,
                  sex:str,
                  smoker:str,
                  region:str):
         
         self.age=age
         self.bmi=bmi
-        self.children=childrren
+        self.children=children
         self.sex=sex
         self.smoker=smoker
         self.region=region
